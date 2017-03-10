@@ -1,5 +1,6 @@
 RorXmlYamlCodeExecution::Application.routes.draw do
   resources :animals
+  root :to => "animals#index"
 
 
   # The priority is based upon order of creation:
