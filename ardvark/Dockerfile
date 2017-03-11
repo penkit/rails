@@ -22,7 +22,8 @@ RUN set -ex; \
   mkdir -p tmp/cache/assets; \
   chown -R ruby:ruby tmp; \
   apk del .bundle-deps; \
-  rails new . --skip-gemfile --skip-bundle
+  rails new . --skip-gemfile --skip-bundle; \
+  rm public/index.html
 
 COPY db ./db
 COPY app ./app
